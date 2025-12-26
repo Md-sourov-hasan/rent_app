@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:rent_app/const/all_colors.dart';
+import 'package:rent_app/const/all_sizes.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -6,12 +8,151 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home Page'),
+      backgroundColor: AllColors.primaryColor,
+      body:Padding(
+        padding: EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            SizedBox(height: 80,),
+            CircleAvatar(
+              radius: 40,
+              child: Image.asset('assets/images/png/logo.png'),
+            ),
+            SizedBox(height: 20,),
+            Text('RentMate',
+            style: TextStyle(
+              color: AllColors.secondaryColor,
+              fontSize: AllSizes.large,
+            ),
+            ),
+            SizedBox(height: 10,),
+            Text('Manage your rental properties with ease',
+            style: TextStyle(
+              color: AllColors.secondaryColor,
+              fontSize: AllSizes.small,
+            ),
+            ),
+            SizedBox(height: 50,),
+            Container(
+             padding: EdgeInsets.all(10),
+              height: 220,
+              width: MediaQuery.sizeOf(context).width,
+              decoration: BoxDecoration(
+              color:Colors.white.withValues(alpha: 0.1),
+              borderRadius: BorderRadius.circular(16),
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Icon(Icons.person,
+                      color:AllColors.secondaryColor,
+                      size: 30,
+                      ),
+                      SizedBox(width: 10,),
+                      Text("I'm a Landlord",
+                      style: TextStyle(
+                        color: AllColors.secondaryColor,
+                        fontSize: AllSizes.medium,
+                      ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 10,),
+                  Text('Manage properties, tenants, and rent collection',
+                  style:TextStyle(
+                    color: AllColors.secondaryColor,
+                    fontSize:20,
+                  ),
+                  ),
+                  SizedBox(height: 20,),
+                  InkWell(
+                    onTap: () {
+                      
+                    },
+                    child: Container(
+                      padding: EdgeInsets.all(5),
+                      height: 50,
+                      width: MediaQuery.sizeOf(context).width,
+                      decoration: BoxDecoration(
+                        color:Color(0xff00AA8E),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child:Center(
+                        child: Text('Get Started',
+                        style: TextStyle(
+                          color:Color(0xff1C1C1C),
+                          fontSize: AllSizes.medium,
+                        ),
+                        ),
+                      ),
+                       ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 20,),
+            Container(
+              padding: EdgeInsets.all(10),
+              height: 220,
+              width: MediaQuery.sizeOf(context).width,
+              decoration: BoxDecoration(
+              color:Colors.white.withValues(alpha: 0.1),
+              borderRadius: BorderRadius.circular(16),
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Icon(Icons.home,
+                      color:AllColors.secondaryColor,
+                      size: 30,
+                      ),
+                      SizedBox(width: 10,),
+                      Text("I'm a Tenant",
+                      style: TextStyle(
+                        color: AllColors.secondaryColor,
+                        fontSize: AllSizes.medium,
+                      ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 10,),
+                  Text('Pay rent, submit requests, and manage your lease',
+                  style:TextStyle(
+                    color: AllColors.secondaryColor,
+                    fontSize:20,
+                  ),
+                  ),
+                  SizedBox(height: 20,),
+                  InkWell(
+                    onTap: () {
+                      
+                    },
+                    child: Container(
+                      padding: EdgeInsets.all(5),
+                      height: 50,
+                      width: MediaQuery.sizeOf(context).width,
+                      decoration: BoxDecoration(
+                        color:AllColors.secondaryColor,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child:Center(
+                        child: Text('Get Started',
+                        style: TextStyle(
+                          color:Color(0xff1C1C1C),
+                          fontSize: AllSizes.medium,
+                        ),
+                        ),
+                      ),
+                       ),
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
-      body: const Center(
-        child: Text('Welcome to the Home Page!'),
-      ),
-    );
+      );
   }
 }
