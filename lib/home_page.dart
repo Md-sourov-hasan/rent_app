@@ -40,6 +40,9 @@ class HomePage extends StatelessWidget {
               decoration: BoxDecoration(
               color:Colors.white.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(16),
+              border: Border.all(
+                 color: Colors.white.withValues(alpha: 0.3),
+                  )
               ),
               child: Column(
                 children: [
@@ -99,6 +102,9 @@ class HomePage extends StatelessWidget {
               decoration: BoxDecoration(
               color:Colors.white.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(16),
+              border: Border.all(
+                 color: Colors.white.withValues(alpha: 0.3),
+                  )
               ),
               child: Column(
                 children: [
@@ -149,7 +155,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
