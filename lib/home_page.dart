@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rent_app/auth/login.dart';
 import 'package:rent_app/const/all_colors.dart';
 import 'package:rent_app/const/all_sizes.dart';
 
@@ -71,7 +72,9 @@ class HomePage extends StatelessWidget {
                   SizedBox(height: 20,),
                   InkWell(
                     onTap: () {
-                      
+                      Navigator.push(context, 
+                      MaterialPageRoute(builder: (context) => const Login())
+                      );
                     },
                     child: Container(
                       padding: EdgeInsets.all(5),
