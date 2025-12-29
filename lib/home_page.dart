@@ -14,12 +14,12 @@ class HomePage extends StatelessWidget {
         padding: EdgeInsets.all(16.0),
         child: Column(
           children: [
-            SizedBox(height: 80,),
+            SizedBox(height: 40,),
             CircleAvatar(
               radius: 40,
               child: Image.asset('assets/images/png/logo.png'),
             ),
-            SizedBox(height: 20,),
+            SizedBox(height: 10,),
             Text('RentMate',
             style: TextStyle(
               color: AllColors.secondaryColor,
@@ -33,7 +33,7 @@ class HomePage extends StatelessWidget {
               fontSize: AllSizes.small,
             ),
             ),
-            SizedBox(height: 50,),
+            SizedBox(height: 20,),
             Container(
              padding: EdgeInsets.all(10),
               height: 220,

@@ -11,38 +11,38 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  bool isPassVisible=true;
+  bool isPassVisible = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AllColors.primaryColor,
       appBar: AppBar(
-        toolbarHeight: 100,
+        toolbarHeight: 60,
         automaticallyImplyLeading: false,
         backgroundColor: AllColors.primaryColor,
         leadingWidth: 100,
         elevation: 0,
         titleSpacing: 0,
         title: Padding(
-          padding: EdgeInsets.only(left: 16),
+          padding: EdgeInsets.only(left: 16, top: 10),
           child: Row(
             children: [
               Container(
-                height: 60,
-                width: 60,
+                height: 45,
+                width: 45,
                 decoration: BoxDecoration(
                   color: AllColors.secondaryColor,
-                  borderRadius: BorderRadius.circular(40),
+                  borderRadius: BorderRadius.circular(30),
                 ),
                 child: InkWell(
-                  borderRadius: BorderRadius.circular(40),
+                  borderRadius: BorderRadius.circular(30),
                   onTap: () {
                     Navigator.pop(context);
                   },
                   child: Center(
                     child: Icon(
                       Icons.arrow_back_ios_new,
-                      size: 30,
+                      size: 24,
                       color: AllColors.primaryColor,
                     ),
                   ),
@@ -63,7 +63,7 @@ class _LoginState extends State<Login> {
                 'Welcome to\n Landlord Access',
                 style: TextStyle(
                   color: AllColors.secondaryColor,
-                  fontSize: AllSizes.large,
+                  fontSize: AllSizes.medium,
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -72,7 +72,7 @@ class _LoginState extends State<Login> {
                 'Please sign in to continue our app',
                 style: TextStyle(
                   color: AllColors.secondaryColor,
-                  fontSize: AllSizes.medium,
+                  fontSize: AllSizes.small,
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -80,7 +80,7 @@ class _LoginState extends State<Login> {
               Padding(
                 padding: EdgeInsets.only(left: 45, right: 45),
                 child: Container(
-                  height: 70,
+                  height: 60,
                   width: 20,
                   decoration: BoxDecoration(
                     color: AllColors.secondaryColor.withValues(alpha: 0.2),
@@ -96,7 +96,7 @@ class _LoginState extends State<Login> {
                               padding: const EdgeInsets.all(8.0),
                               child: Container(
                                 height: MediaQuery.sizeOf(context).height,
-                                width: 130,
+                                width: 90,
                                 decoration: BoxDecoration(
                                   color: AllColors.secondaryColor,
                                   borderRadius: BorderRadius.circular(15),
@@ -106,7 +106,7 @@ class _LoginState extends State<Login> {
                                     'Login',
                                     style: TextStyle(
                                       color: AllColors.primaryColor,
-                                      fontSize: AllSizes.medium,
+                                      fontSize: AllSizes.small,
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
@@ -125,7 +125,7 @@ class _LoginState extends State<Login> {
                               padding: const EdgeInsets.all(8.0),
                               child: Container(
                                 height: MediaQuery.sizeOf(context).height,
-                                width: 130,
+                                width: 90,
                                 decoration: BoxDecoration(
                                   // color: AllColors.secondaryColor,
                                   borderRadius: BorderRadius.circular(15),
@@ -144,7 +144,7 @@ class _LoginState extends State<Login> {
                                       'Register',
                                       style: TextStyle(
                                         color: AllColors.secondaryColor,
-                                        fontSize: AllSizes.medium,
+                                        fontSize: AllSizes.small,
                                       ),
                                       textAlign: TextAlign.center,
                                     ),
@@ -159,21 +159,23 @@ class _LoginState extends State<Login> {
                   ),
                 ),
               ),
-              SizedBox(height: 20,),
-              Text('Email *',
-              style: TextStyle(
-                color: AllColors.secondaryColor,
-                fontSize: AllSizes.medium,
+              SizedBox(height: 10),
+              Text(
+                'Email *',
+                style: TextStyle(color: AllColors.secondaryColor, fontSize: 20),
               ),
-              ),
-              SizedBox(height: 10,),
+              SizedBox(height: 5),
               Container(
-                height: 50,
+                height: 40,
                 width: MediaQuery.sizeOf(context).width,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
                   color: AllColors.secondaryColor.withValues(alpha: 0.1),
-                  border: BoxBorder.all(width: 1,color: AllColors.secondaryColor,style: BorderStyle.solid,),
+                  border: BoxBorder.all(
+                    width: 1,
+                    color: AllColors.secondaryColor,
+                    style: BorderStyle.solid,
+                  ),
                 ),
                 child: TextField(
                   cursorColor: AllColors.secondaryColor,
@@ -185,28 +187,28 @@ class _LoginState extends State<Login> {
                   decoration: InputDecoration(
                     contentPadding: EdgeInsets.all(10),
                     hintText: 'email',
-                    hintStyle:TextStyle(
-                      color: AllColors.secondaryColor,
-                    ),
+                    hintStyle: TextStyle(color: AllColors.secondaryColor),
                     border: InputBorder.none,
                   ),
                 ),
               ),
-              SizedBox(height: 10,),
-              Text('Password *',
-              style: TextStyle(
-                color: AllColors.secondaryColor,
-                fontSize: AllSizes.medium,
+              SizedBox(height: 10),
+              Text(
+                'Password *',
+                style: TextStyle(color: AllColors.secondaryColor, fontSize: 20),
               ),
-              ),
-              SizedBox(height: 10,),
+              SizedBox(height: 5),
               Container(
-                height: 50,
+                height: 40,
                 width: MediaQuery.sizeOf(context).width,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
                   color: AllColors.secondaryColor.withValues(alpha: 0.1),
-                  border: BoxBorder.all(width: 1,color: AllColors.secondaryColor,style: BorderStyle.solid,),
+                  border: BoxBorder.all(
+                    width: 1,
+                    color: AllColors.secondaryColor,
+                    style: BorderStyle.solid,
+                  ),
                 ),
                 child: TextField(
                   obscureText: isPassVisible,
@@ -215,32 +217,78 @@ class _LoginState extends State<Login> {
                     color: AllColors.secondaryColor,
                     fontSize: AllSizes.small,
                   ),
-                  keyboardType:TextInputType.visiblePassword,
+                  keyboardType: TextInputType.visiblePassword,
                   decoration: InputDecoration(
                     contentPadding: EdgeInsets.all(10),
                     hintText: 'enter your passward',
-                    hintStyle:TextStyle(
-                      color: AllColors.secondaryColor,
-                    ),
+                    hintStyle: TextStyle(color: AllColors.secondaryColor),
                     border: InputBorder.none,
-                    suffixIcon:IconButton(
-                      onPressed:(){
+                    suffixIcon: IconButton(
+                      onPressed: () {
                         setState(() {
-                          isPassVisible=!isPassVisible;
+                          isPassVisible = !isPassVisible;
                         });
                       },
-                       icon: Icon(
-                        isPassVisible?Icons.visibility_off:Icons.visibility,
+                      icon: Icon(
+                        isPassVisible ? Icons.visibility_off : Icons.visibility,
                         color: AllColors.secondaryColor,
-                       ),
-                        ), 
+                      ),
+                    ),
                   ),
+                ),
+              ),
+              SizedBox(height: 20),
+              Container(
+                height: 40,
+                decoration: BoxDecoration(
+                  color: AllColors.secondaryColor,
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(15),
+                  onTap: () {},
+                  child: Center(
+                    child: Text(
+                      'Login',
+                      style: TextStyle(
+                        color: AllColors.primaryColor,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20,),
+              GestureDetector(
+                onTap: () {
+                  
+                },
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      'Forgot password?',
+                      style: TextStyle(
+                        fontSize: AllSizes.small,
+                        color: AllColors.secondaryColor,
+                      ),
+                    ),
+                    SizedBox(height: 1), 
+                    Container(
+                      height: 1,
+                      width: 140, 
+                      color: AllColors.secondaryColor,
+                    ),
+                  ],
                 ),
               ),
             ],
           ),
         ),
+        
       ),
+      
     );
   }
 }
