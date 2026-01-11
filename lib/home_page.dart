@@ -71,6 +71,7 @@ class HomePage extends StatelessWidget {
                   ),
                   SizedBox(height: 20,),
                   InkWell(
+                    borderRadius: BorderRadius.circular(10),
                     onTap: () {
                       Navigator.push(context, 
                       MaterialPageRoute(builder: (context) => const Login())
@@ -135,6 +136,7 @@ class HomePage extends StatelessWidget {
                   ),
                   SizedBox(height: 20,),
                   InkWell(
+                    borderRadius: BorderRadius.circular(10),
                     onTap: () {
                       
                     },

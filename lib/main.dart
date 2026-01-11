@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rent_app/auth/login.dart';
+import 'package:rent_app/auth/otp.dart';
 import 'package:rent_app/home_page.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: Otp(),
     );
   }
 }

@@ -64,6 +64,7 @@ class _LoginState extends State<Login> {
                 style: TextStyle(
                   color: AllColors.secondaryColor,
                   fontSize: AllSizes.medium,
+                  fontWeight: FontWeight.bold,
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -73,6 +74,7 @@ class _LoginState extends State<Login> {
                 style: TextStyle(
                   color: AllColors.secondaryColor,
                   fontSize: AllSizes.small,
+                  fontWeight: FontWeight.bold,
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -107,6 +109,7 @@ class _LoginState extends State<Login> {
                                     style: TextStyle(
                                       color: AllColors.primaryColor,
                                       fontSize: AllSizes.small,
+                                      fontWeight: FontWeight.bold,
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
@@ -131,8 +134,9 @@ class _LoginState extends State<Login> {
                                   borderRadius: BorderRadius.circular(15),
                                 ),
                                 child: InkWell(
+                                  borderRadius: BorderRadius.circular(15),
                                   onTap: () {
-                                    Navigator.push(
+                                    Navigator.pushReplacement(
                                       context,
                                       MaterialPageRoute(
                                         builder: (context) => Register(),
@@ -145,6 +149,7 @@ class _LoginState extends State<Login> {
                                       style: TextStyle(
                                         color: AllColors.secondaryColor,
                                         fontSize: AllSizes.small,
+                                        fontWeight: FontWeight.bold,
                                       ),
                                       textAlign: TextAlign.center,
                                     ),
@@ -162,7 +167,11 @@ class _LoginState extends State<Login> {
               SizedBox(height: 10),
               Text(
                 'Email *',
-                style: TextStyle(color: AllColors.secondaryColor, fontSize: 20),
+                style: TextStyle(
+                  color: AllColors.secondaryColor,
+                   fontSize: 20,
+                   fontWeight: FontWeight.bold,
+                   ),
               ),
               SizedBox(height: 5),
               Container(
@@ -195,7 +204,11 @@ class _LoginState extends State<Login> {
               SizedBox(height: 10),
               Text(
                 'Password *',
-                style: TextStyle(color: AllColors.secondaryColor, fontSize: 20),
+                style: TextStyle(
+                  color: AllColors.secondaryColor,
+                   fontSize: 20,
+                   fontWeight: FontWeight.bold
+                   ),
               ),
               SizedBox(height: 5),
               Container(
@@ -259,7 +272,7 @@ class _LoginState extends State<Login> {
                   ),
                 ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: 140,),
               GestureDetector(
                 onTap: () {
                   
