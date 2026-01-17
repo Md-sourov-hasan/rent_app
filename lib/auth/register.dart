@@ -3,6 +3,7 @@ import 'package:rent_app/auth/login.dart';
 import 'package:rent_app/auth/register.dart';
 import 'package:rent_app/const/all_colors.dart';
 import 'package:rent_app/const/all_sizes.dart';
+import 'package:rent_app/widgets/custom_button.dart';
 
 class Register extends StatefulWidget {
   const Register({super.key});
@@ -347,32 +348,7 @@ class _LoginState extends State<Register> {
               ),
               ),
               SizedBox(height: 20),
-              Container(
-                height: 40,
-                decoration: BoxDecoration(
-                  color: AllColors.secondaryColor,
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: InkWell(
-                  borderRadius: BorderRadius.circular(15),
-                  onTap: () {
-                    Navigator.pushReplacement(context,
-                     MaterialPageRoute(
-                      builder: (context) => Register(), 
-                     ));
-                  },
-                  child: Center(
-                    child: Text(
-                      'Register',
-                      style: TextStyle(
-                        color: AllColors.primaryColor,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+              CustomButton(label: 'Register', ontap: (){}),
             ],
           ),
         ),

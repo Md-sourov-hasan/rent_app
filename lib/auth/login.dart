@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rent_app/auth/register.dart';
 import 'package:rent_app/const/all_colors.dart';
 import 'package:rent_app/const/all_sizes.dart';
+import 'package:rent_app/widgets/custom_button.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -251,27 +252,7 @@ class _LoginState extends State<Login> {
                 ),
               ),
               SizedBox(height: 20),
-              Container(
-                height: 40,
-                decoration: BoxDecoration(
-                  color: AllColors.secondaryColor,
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: InkWell(
-                  borderRadius: BorderRadius.circular(15),
-                  onTap: () {},
-                  child: Center(
-                    child: Text(
-                      'Login',
-                      style: TextStyle(
-                        color: AllColors.primaryColor,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+              CustomButton(label: 'Login', ontap: () {}),
               SizedBox(height: 140,),
               GestureDetector(
                 onTap: () {

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rent_app/const/all_colors.dart';
 import 'package:rent_app/const/all_sizes.dart';
+import 'package:rent_app/widgets/custom_button.dart';
 
 class Otp extends StatefulWidget {
   const Otp({super.key});
@@ -59,21 +60,23 @@ class _OtpState extends State<Otp> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Center(
-                child: Text('OTP Verification',
-                 style: TextStyle(
-                  fontSize: AllSizes.large,
+                child: Text(
+                  'OTP Verification',
+                  style: TextStyle(
+                    fontSize: AllSizes.large,
+                    color: AllColors.secondaryColor,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
+              Text(
+                'Please check your number\n +880*******333 to see the\n verification code',
+                style: TextStyle(
+                  fontSize: AllSizes.small,
                   color: AllColors.secondaryColor,
-                  fontWeight: FontWeight.bold,
-                 )
-                 ),
-              ),
-              SizedBox(height: 10,),
-              Text('Please check your number\n +880*******333 to see the\n verification code',
-              style: TextStyle(
-                fontSize: AllSizes.small,
-                color: AllColors.secondaryColor,
-              ),
-              textAlign: TextAlign.center,
+                ),
+                textAlign: TextAlign.center,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -199,6 +202,62 @@ class _OtpState extends State<Otp> {
                           FilteringTextInputFormatter.digitsOnly,
                         ],
                       ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
+              CustomButton(label: 'Verify', ontap: () {}),
+              SizedBox(height: 20),
+              InkWell(
+                onTap: () {},
+                borderRadius: BorderRadius.circular(15),
+                child: Container(
+                  height: 50,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: AllColors.secondaryColor.withOpacity(0.3),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.refresh,
+                          color: AllColors.primaryColor,
+                          size: 22,
+                        ),
+                        SizedBox(width: 8),
+                        Text(
+                          'Re-Send',
+                          style: TextStyle(
+                            color: AllColors.primaryColor,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Resend code to',
+                    style: TextStyle(
+                      color: AllColors.secondaryColor,
+                      fontSize: AllSizes.small,
+                    ),
+                  ),
+                  Text(
+                    '10.00',
+                    style: TextStyle(
+                      color: AllColors.secondaryColor,
+                      fontSize: AllSizes.small,
                     ),
                   ),
                 ],
