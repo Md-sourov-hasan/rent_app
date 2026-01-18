@@ -62,22 +62,108 @@ class PackageScreen extends StatelessWidget {
               ),
               SizedBox(height: 5),
               Center(
-                child: Text('Select the perfect plan for your needs with transparent pricing and no hidden fees ',
-                style: TextStyle(
-                  color: AllColors.secondaryColor,
-                  fontSize: AllSizes.small
+                child: Text(
+                  'Select the perfect plan for your needs with transparent pricing and no hidden fees ',
+                  style: TextStyle(
+                    color: AllColors.secondaryColor,
+                    fontSize: AllSizes.small,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
-                textAlign: TextAlign.center,
-                ),
-
-                ),
-                SizedBox(height: 10,),
+              ),
+              SizedBox(height: 10),
               Container(
                 height: 380,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: AllColors.secondaryColor.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(10),
+                  border: Border.all(
+                    color: AllColors.secondaryColor.withOpacity(0.2),
+                    width: 2,
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        height: 40,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          color: AllColors.secondaryColor.withOpacity(0.1),
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Center(
+                          child: Text(
+                            'Starter',
+                            style: TextStyle(
+                              color: AllColors.secondaryColor,
+                              fontSize: AllSizes.small,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                      Text(
+                        'Perfect for single properties owner to manage quickly.',
+                        style: TextStyle(
+                          color: AllColors.secondaryColor,
+                          fontSize: AllSizes.small,
+                        ),
+                      ),
+                      SizedBox(height: 5),
+                      Row(
+                        children: [
+                          Text(
+                            '\$9.99',
+                            style: TextStyle(
+                              color: AllColors.secondaryColor,
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            "/month",
+                            style: TextStyle(
+                              color: AllColors.secondaryColor,
+                              fontSize: AllSizes.small,
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 10),
+                      Row(
+  crossAxisAlignment: CrossAxisAlignment.start,
+  children: [
+    Padding(
+      padding: const EdgeInsets.only(top: 6), // fine tune
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Image.asset('assets/images/png/Vector.png', width: 10),
+          Image.asset('assets/images/png/done.png', width: 5),
+        ],
+      ),
+    ),
+    const SizedBox(width: 8),
+    Expanded(
+      child: Text(
+        'Perfect for small properties or less tenant management',
+        style: TextStyle(
+          color: AllColors.secondaryColor,
+          fontSize: AllSizes.small,
+          height: 1.4,
+        ),
+      ),
+    ),
+  ],
+),
+
+                    ],
+                  ),
                 ),
               ),
             ],
