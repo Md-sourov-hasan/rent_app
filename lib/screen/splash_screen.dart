@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rent_app/const/all_colors.dart';
-import 'package:rent_app/onboarding_screen.dart';
+import 'package:rent_app/screen/onboarding_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -14,7 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 60), () {
+    Future.delayed(const Duration(seconds: 5), () {
       if (!mounted) return;
       Get.off(() => const OnboardingScreen()); // 3 sec splash
     });

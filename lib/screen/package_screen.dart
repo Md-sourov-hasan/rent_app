@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/route_manager.dart';
 import 'package:rent_app/const/all_colors.dart';
 import 'package:rent_app/const/all_sizes.dart';
+import 'package:rent_app/screen/home_screen.dart';
+import 'package:rent_app/screen/onboarding_screen.dart';
 import 'package:rent_app/widgets/custom_button.dart';
 import 'package:rent_app/widgets/plan_text.dart';
 
@@ -158,7 +162,9 @@ class PackageScreen extends StatelessWidget {
                       SizedBox(height: 5,),
                       PlanText(text: 'Manage maintenance requests'),
                       SizedBox(height:30,),
-                      CustomButton(label: 'Select Package', ontap:(){})
+                      CustomButton(label: 'Select Package', ontap:(){
+                        Get.to(()=>HomeScreen());
+                      })
                     ],
                   ),
                 ),
@@ -254,7 +260,9 @@ class PackageScreen extends StatelessWidget {
                       SizedBox(height: 5,),
                       PlanText(text: 'Manage maintenance requests'),
                       SizedBox(height:30,),
-                      CustomButton(label: 'Select Package', ontap:(){})
+                      CustomButton(label: 'Select Package', ontap:(){
+                        Get.to(()=>HomeScreen());
+                      })
                     ],
                   ),
                 ),
@@ -345,7 +353,9 @@ class PackageScreen extends StatelessWidget {
                       SizedBox(height: 5,),
                       PlanText(text: 'Manage maintenance requests'),
                       SizedBox(height:30,),
-                      CustomButton(label: 'Select Package', ontap:(){}),
+                      CustomButton(label: 'Select Package', ontap:(){
+                        Get.to(()=>HomeScreen());
+                      }),
                     ],
                   ),
                 ),

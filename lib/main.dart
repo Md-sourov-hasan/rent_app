@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:rent_app/screen/home_screen.dart';
 import 'package:rent_app/screen/splash_screen.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: const SplashScreen(), // <-- direct Flutter splash screen
+      home: const SplashScreen(), 
     );
   }
 }
