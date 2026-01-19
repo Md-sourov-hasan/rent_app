@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rent_app/const/all_colors.dart';
 import 'package:rent_app/const/all_sizes.dart';
 
+// ignore: must_be_immutable
 class PlanText extends StatelessWidget {
   String text;
    PlanText({super.key,required this.text});
