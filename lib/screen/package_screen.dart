@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rent_app/const/all_colors.dart';
 import 'package:rent_app/const/all_sizes.dart';
+import 'package:rent_app/widgets/custom_button.dart';
+import 'package:rent_app/widgets/plan_text.dart';
 
 class PackageScreen extends StatelessWidget {
   const PackageScreen({super.key});
@@ -9,7 +11,13 @@ class PackageScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AllColors.primaryColor,
-      appBar: AppBar(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              AppBar(
         toolbarHeight: 60,
         automaticallyImplyLeading: false,
         backgroundColor: AllColors.primaryColor,
@@ -17,7 +25,7 @@ class PackageScreen extends StatelessWidget {
         elevation: 0,
         titleSpacing: 0,
         title: Padding(
-          padding: EdgeInsets.only(left: 16, top: 10),
+          padding: EdgeInsets.only(left: 10, top: 5),
           child: Row(
             children: [
               Container(
@@ -45,12 +53,7 @@ class PackageScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
+      SizedBox(height: 10,),
               Center(
                 child: Text(
                   "Choose Your Plan",
@@ -71,9 +74,18 @@ class PackageScreen extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
               ),
+
+
+
+
+
               SizedBox(height: 10),
+
+
+
+
               Container(
-                height: 380,
+                height: 430,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: AllColors.secondaryColor.withOpacity(0.1),
@@ -107,6 +119,7 @@ class PackageScreen extends StatelessWidget {
                           ),
                         ),
                       ),
+                      SizedBox(height: 5,),
                       Text(
                         'Perfect for single properties owner to manage quickly.',
                         style: TextStyle(
@@ -135,37 +148,209 @@ class PackageScreen extends StatelessWidget {
                         ],
                       ),
                       SizedBox(height: 10),
-                      Row(
-  crossAxisAlignment: CrossAxisAlignment.start,
-  children: [
-    Padding(
-      padding: const EdgeInsets.only(top: 6), // fine tune
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-          Image.asset('assets/images/png/Vector.png', width: 10),
-          Image.asset('assets/images/png/done.png', width: 5),
-        ],
-      ),
-    ),
-    const SizedBox(width: 8),
-    Expanded(
-      child: Text(
-        'Perfect for small properties or less tenant management',
-        style: TextStyle(
-          color: AllColors.secondaryColor,
-          fontSize: AllSizes.small,
-          height: 1.4,
-        ),
-      ),
-    ),
-  ],
-),
-
+                      PlanText(text: "Perfect for small properties or less tenant management"),
+                      SizedBox(height: 5,),
+                      PlanText(text: 'Up-to 3 properties listing'),
+                      SizedBox(height: 5,),
+                      PlanText(text: 'Manage tenants and payments'),
+                      SizedBox(height: 5,),
+                      PlanText(text: "Manage rents, bill and revenue reports"),
+                      SizedBox(height: 5,),
+                      PlanText(text: 'Manage maintenance requests'),
+                      SizedBox(height:30,),
+                      CustomButton(label: 'Select Package', ontap:(){})
                     ],
                   ),
                 ),
               ),
+
+
+
+
+
+              SizedBox(height: 20,),
+
+
+
+
+
+              Container(
+                height: 430,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                 gradient: LinearGradient(colors: [
+                  Color(0xff16A34A),
+                  Color(0xff007DFF),
+                 ],
+                 begin: Alignment.topCenter,
+                 end: Alignment.bottomCenter,
+                 ),
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(
+                    color: AllColors.secondaryColor.withOpacity(0.2),
+                    width: 2,
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        height: 40,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          color:Color(0xff167e84).withOpacity(0.8),
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Center(
+                          child: Text(
+                            'Pro',
+                            style: TextStyle(
+                              color: AllColors.secondaryColor,
+                              fontSize: AllSizes.small,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 5,),
+                      Text(
+                        'Perfect for individuals taking control of their proposal.',
+                        style: TextStyle(
+                          color: AllColors.secondaryColor,
+                          fontSize: AllSizes.small,
+                        ),
+                      ),
+                      SizedBox(height: 5),
+                      Row(
+                        children: [
+                          Text(
+                            '\$19.99',
+                            style: TextStyle(
+                              color: AllColors.secondaryColor,
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            "/month",
+                            style: TextStyle(
+                              color: AllColors.secondaryColor,
+                              fontSize: AllSizes.small,
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 10),
+                      PlanText(text: "Perfect for small properties or less tenant management"),
+                      SizedBox(height: 5,),
+                      PlanText(text: 'Up-to 10 properties listing'),
+                      SizedBox(height: 5,),
+                      PlanText(text: 'Manage tenants and payments'),
+                      SizedBox(height: 5,),
+                      PlanText(text: "Manage rents, bill and revenue reports"),
+                      SizedBox(height: 5,),
+                      PlanText(text: 'Manage maintenance requests'),
+                      SizedBox(height:30,),
+                      CustomButton(label: 'Select Package', ontap:(){})
+                    ],
+                  ),
+                ),
+              ),
+
+
+
+
+
+
+              SizedBox(height: 20,),
+
+
+
+
+
+              Container(
+                height: 430,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: AllColors.secondaryColor.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(
+                    color: AllColors.secondaryColor.withOpacity(0.2),
+                    width: 2,
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        height: 40,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          color: AllColors.secondaryColor.withOpacity(0.1),
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Center(
+                          child: Text(
+                            'Advanced',
+                            style: TextStyle(
+                              color: AllColors.secondaryColor,
+                              fontSize: AllSizes.small,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 5,),
+                      Text(
+                        'Perfect for individuals taking control of their proposal.',
+                        style: TextStyle(
+                          color: AllColors.secondaryColor,
+                          fontSize: AllSizes.small,
+                        ),
+                      ),
+                      SizedBox(height: 5),
+                      Row(
+                        children: [
+                          Text(
+                            '\$35.99',
+                            style: TextStyle(
+                              color: AllColors.secondaryColor,
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            "/month",
+                            style: TextStyle(
+                              color: AllColors.secondaryColor,
+                              fontSize: AllSizes.small,
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 10),
+                      PlanText(text: "Perfect for small properties or less tenant management"),
+                      SizedBox(height: 5,),
+                      PlanText(text: 'Unlimited properties listing'),
+                      SizedBox(height: 5,),
+                      PlanText(text: 'Manage tenants and payments'),
+                      SizedBox(height: 5,),
+                      PlanText(text: "Manage rents, bill and revenue reports"),
+                      SizedBox(height: 5,),
+                      PlanText(text: 'Manage maintenance requests'),
+                      SizedBox(height:30,),
+                      CustomButton(label: 'Select Package', ontap:(){}),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 50,)
             ],
           ),
         ),

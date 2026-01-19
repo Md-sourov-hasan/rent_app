@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 import 'package:rent_app/auth/register.dart';
 import 'package:rent_app/const/all_colors.dart';
 import 'package:rent_app/const/all_sizes.dart';
+import 'package:rent_app/screen/package_screen.dart';
 import 'package:rent_app/widgets/custom_button.dart';
 
 class Login extends StatefulWidget {
@@ -252,7 +254,11 @@ class _LoginState extends State<Login> {
                 ),
               ),
               SizedBox(height: 20),
-              CustomButton(label: 'Login', ontap: () {}),
+              CustomButton(label: 'Login', ontap: () {
+                Get.to((){
+                  return PackageScreen();
+                });
+              }),
               SizedBox(height: 140,),
               GestureDetector(
                 onTap: () {

@@ -3,8 +3,8 @@ import 'package:rent_app/auth/login.dart';
 import 'package:rent_app/const/all_colors.dart';
 import 'package:rent_app/const/all_sizes.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class OnboardingScreen extends StatelessWidget {
+  const OnboardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

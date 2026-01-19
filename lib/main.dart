@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:rent_app/auth/login.dart';
-import 'package:rent_app/auth/otp.dart';
-import 'package:rent_app/auth/register.dart';
-import 'package:rent_app/home_page.dart';
-import 'package:rent_app/screen/package_screen.dart';
+import 'package:get/get.dart';
+import 'package:rent_app/screen/splash_screen.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized(); // ensure everything initialized
   runApp(const MyApp());
 }
 
@@ -14,9 +12,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home:PackageScreen(),
+      title: 'Rent App',
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+      ),
+      home: const SplashScreen(), // <-- direct Flutter splash screen
     );
   }
 }
