@@ -163,7 +163,7 @@ class PackageScreen extends StatelessWidget {
                       PlanText(text: 'Manage maintenance requests'),
                       SizedBox(height:30,),
                       CustomButton(label: 'Select Package', ontap:(){
-                        Get.to(()=>HomeScreen());
+                        Get.offAll(()=>HomeScreen());
                       })
                     ],
                   ),
@@ -261,7 +261,7 @@ class PackageScreen extends StatelessWidget {
                       PlanText(text: 'Manage maintenance requests'),
                       SizedBox(height:30,),
                       CustomButton(label: 'Select Package', ontap:(){
-                        Get.to(()=>HomeScreen());
+                        Get.offAll(()=>HomeScreen());
                       })
                     ],
                   ),
@@ -354,7 +354,7 @@ class PackageScreen extends StatelessWidget {
                       PlanText(text: 'Manage maintenance requests'),
                       SizedBox(height:30,),
                       CustomButton(label: 'Select Package', ontap:(){
-                        Get.to(()=>HomeScreen());
+                        Get.offAll(()=>HomeScreen());
                       }),
                     ],
                   ),
