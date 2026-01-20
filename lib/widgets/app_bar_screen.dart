@@ -1,55 +1,42 @@
-// import 'package:flutter/material.dart';
-// import 'package:rent_app/const/all_colors.dart';
-// class AppBarScreen extends StatelessWidget implements PreferredSizeWidget {
-//   final String title;
-// final bool showBack;
-//   const AppBarScreen({
-//     super.key,
-//     required this.title,
-//     required this.showBack,
-//   });
+import 'package:flutter/material.dart';
+import 'package:rent_app/const/all_colors.dart';
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return AppBar(
-//       toolbarHeight: 60,
-//       automaticallyImplyLeading: false,
-//       backgroundColor: AllColors.primaryColor,
-//       leadingWidth: 100,
-//       elevation: 0,
-//       titleSpacing: 0,
-//       title: Padding(
-//         padding: EdgeInsets.only(left: 16, top: 10),
-//         child: Row(
-//           children: [
-//             Container(
-//               height: 45,
-//               width: 45,
-//               decoration: BoxDecoration(
-//                 color: AllColors.secondaryColor,
-//                 borderRadius: BorderRadius.circular(30),
-//               ),
-//               child: InkWell(
-//                 borderRadius: BorderRadius.circular(30),
-//                 onTap: () {
-//                   Navigator.pop(context);
-//                 },
-//                 child: Center(
-//                   child: Icon(
-//                     Icons.arrow_back_ios_new,
-//                     size: 24,
-//                     color: AllColors.primaryColor,
-//                   ),
-//                 ),
-//               ),
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-  
-//   @override
-//   // TODO: implement preferredSize
-//   Size get preferredSize => Size.fromHeight(60);
-// }
+class AppBarScreen extends StatelessWidget {
+  const AppBarScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 60,
+      width: 60,
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 5, top: 5),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 50,
+                          width: 50,
+                          decoration: BoxDecoration(
+                            color: AllColors.secondaryColor,
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          child: InkWell(
+                            borderRadius: BorderRadius.circular(30),
+                            onTap: () {
+                              Navigator.pop(context);
+                            },
+                            child: Center(
+                              child: Icon(
+                                Icons.arrow_back_ios_new,
+                                size: 24,
+                                color: AllColors.primaryColor,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                );
+  }
+}
