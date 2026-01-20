@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:rent_app/screen/home_screen.dart';
-import 'package:rent_app/screen/onboarding_screen.dart';
-import 'package:rent_app/screen/package_screen.dart';
 import 'package:rent_app/screen/splash_screen.dart';
 
 void main() {
