@@ -295,13 +295,13 @@ class _HomeScreenState extends State<HomeScreen> {
                               borderRadius: BorderRadius.circular(10),
                             ),
                             child: Image.asset(
-                              'assets/images/png/person.png',
+                              'assets/images/png/maintain.png',
                               fit: BoxFit.cover,
                             ),
                           ),
                           SizedBox(height: 5),
                           Text(
-                            'Total Tenants',
+                            'Maintenance',
                             style: TextStyle(
                               fontSize: 16,
                               color: Colors.black,
@@ -310,7 +310,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           SizedBox(height: 5),
                           Text(
-                            '24',
+                            '8',
                             style: TextStyle(
                               fontSize: 22,
                               color: Colors.black,
@@ -319,7 +319,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           SizedBox(height: 5),
                           Text(
-                            '+3 this month',
+                            '3 urgent',
                             style: TextStyle(
                               fontSize: 12,
                               color: Colors.black.withOpacity(0.3),
