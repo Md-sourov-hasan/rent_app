@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rent_app/const/all_colors.dart';
 import 'package:rent_app/const/all_sizes.dart';
+import 'package:rent_app/widgets/all.dart';
 import 'package:rent_app/widgets/selectedCategoryView.dart';
 import 'package:rent_app/widgets/unselectedCategoryView.dart';
 
@@ -28,12 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget buildCategoryScreen() {
     switch (selectedCategory) {
       case 0:
-        return const Center(
-          child: Text(
-            "All Screen",
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-          ),
-        );
+        return All() ;
       case 1:
         return const Center(
           child: Text(
