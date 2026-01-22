@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rent_app/const/all_colors.dart';
 
 Widget unselectedCategoryView(
   String category,
