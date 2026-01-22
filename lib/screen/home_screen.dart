@@ -10,9 +10,16 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  int currentIndex=0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(onPressed: (){},
+      shape: CircleBorder(),
+      backgroundColor: AllColors.primaryColor,
+      child: Icon(Icons.add,color: AllColors.secondaryColor,size: 30,),
+      ),
       body: Padding(
         padding: const EdgeInsets.only(
           top: 40,
@@ -404,6 +411,50 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ],
             ),
+            SizedBox(height: 20,),
+            Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    height: 50,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: AllColors.primaryColor,
+                      borderRadius: BorderRadius.circular(10)
+                    ),
+                    child: Center(
+                      child: Text('Add Property',
+                      style: TextStyle(
+                        color: AllColors.secondaryColor,
+                        fontSize: AllSizes.small,
+                      ),
+                      ),
+                    ),
+                  )
+                  ),
+                  SizedBox(width: 10,),
+                  Expanded(
+                  child: Container(
+                    height: 50,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: AllColors.secondaryColor,
+                      borderRadius: BorderRadius.circular(10)
+                    ),
+                    child: Center(
+                      child: Text('Manage Tenants',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: AllSizes.small,
+                      ),
+                      ),
+                    ),
+                  )
+                  ),
+              ],
+            ),
+            SizedBox(height: 10,),
+            BottomNavigationBar(items: []),
           ],
         ),
       ),
