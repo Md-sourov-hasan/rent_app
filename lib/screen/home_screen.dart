@@ -517,7 +517,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
               // ===================== CATEGORY LIST =====================
               SizedBox(
-                height: 70,
+                height: 100,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemCount: categories.length,

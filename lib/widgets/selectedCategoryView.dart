@@ -4,23 +4,23 @@ import 'package:rent_app/const/all_sizes.dart';
 
 selectedCategoryView(Map<String, String> category) {
   return Padding(
-    padding: const EdgeInsets.only(top: 8.0, bottom: 8, left: 12, right: 12.0),
+    padding: const EdgeInsets.only(top: 8.0, bottom: 8, left: 8, right: 0),
     child: Container(
-      height: 100,
-      width: 100,
+      height: 50,
+      width: 60,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(0),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
                 category['image']!,
-                width: 30,
-                height: 30,
+                width: 25,
+                height: 25,
                 color: Color(0xff1e40af)
               ),
               const SizedBox(height: 6),
@@ -28,7 +28,8 @@ selectedCategoryView(Map<String, String> category) {
                 category['name']!,
                 style: TextStyle(
                   color: AllColors.primaryColor,
-                  fontSize: AllSizes.small,
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ],
