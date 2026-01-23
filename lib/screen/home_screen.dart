@@ -15,21 +15,19 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int selectedCategory = 0;
 
-  List<String> category = [
-    'All',
-    'Combo',
-    'Classic',
-    'Dessert',
-    'Donut',
-    'Pizza',
-    'Burger',
+  List<Map<String, String>> categories = [
+    {'name': 'home', 'image': 'assets/images/png/home_icon.png'},
+    {'name': 'properti', 'image': 'assets/images/png/pro_icon.png'},
+    {'name': 'tenent', 'image': 'assets/images/png/tenent_icon.png'},
+    {'name': 'maintain', 'image': 'assets/images/png/maintain_icon.png'},
+    {'name': 'payment', 'image': 'assets/images/png/pay_icon.png'},
   ];
 
   // ✅ CHANGE 1: New function added (ListView er niche screen show korar jonno)
   Widget buildCategoryScreen() {
     switch (selectedCategory) {
       case 0:
-        return All() ;
+        return All();
       case 1:
         return const Center(
           child: Text(
@@ -174,9 +172,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
-        
+
               const SizedBox(height: 20),
-        
+
               // ===================== TEXT =====================
               Text(
                 'Welcome Mr. Johnson!',
@@ -195,9 +193,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-        
+
               const SizedBox(height: 20),
-        
+
               // ===================== CARDS ROW 1 =====================
               Row(
                 children: [
@@ -332,9 +330,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
-        
+
               const SizedBox(height: 10),
-        
+
               // ===================== CARDS ROW 2 =====================
               Row(
                 children: [
@@ -469,9 +467,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
-        
+
               const SizedBox(height: 20),
-        
+
               // ===================== BUTTONS =====================
               Row(
                 children: [
@@ -514,19 +512,19 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
-        
+
               const SizedBox(height: 10),
-        
+
               // ===================== CATEGORY LIST =====================
               SizedBox(
                 height: 70,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: category.length,
+                  itemCount: categories.length,
                   itemBuilder: (context, index) {
                     return selectedCategory == index
-                        ? selectedCategoryView(category[index])
-                        : unselectedCategoryView(category[index], index, () {
+                        ? selectedCategoryView(categories[index])
+                        : unselectedCategoryView(categories[index], index, () {
                             setState(() {
                               selectedCategory = index;
                             });
@@ -534,9 +532,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   },
                 ),
               ),
-        
+
               const SizedBox(height: 10),
-        
+
               // ✅ CHANGE 2: ListView er niche selected screen show korar jonno Expanded use
               SizedBox(
                 child: Container(
