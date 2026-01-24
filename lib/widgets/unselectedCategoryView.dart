@@ -5,7 +5,7 @@ Widget unselectedCategoryView(
   VoidCallback onTap,
 ) {
   return Padding(
-    padding: const EdgeInsets.only(top: 8.0, bottom: 8, left: 8, right: 0),
+    padding: const EdgeInsets.only(top: 8.0, bottom: 0, left: 8, right: 0),
     child: InkWell(
       onTap: onTap,
       child: Container(
@@ -17,7 +17,7 @@ Widget unselectedCategoryView(
         padding: const EdgeInsets.all(0),
         child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Image.asset(
                 category['image']!,
@@ -25,7 +25,6 @@ Widget unselectedCategoryView(
                 height: 25,
                 color: Color(0xffa4a4a4),
               ),
-              const SizedBox(height: 6),
               Text(
                 category['name']!,
                 style: const TextStyle(

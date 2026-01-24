@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rent_app/const/all_colors.dart';
 import 'package:rent_app/const/all_sizes.dart';
+import 'package:rent_app/screen/package_screen.dart';
 import 'package:rent_app/widgets/all.dart';
 import 'package:rent_app/widgets/selectedCategoryView.dart';
 import 'package:rent_app/widgets/unselectedCategoryView.dart';
@@ -515,23 +516,23 @@ class _HomeScreenState extends State<HomeScreen> {
 
               const SizedBox(height: 10),
 
-              // ===================== CATEGORY LIST =====================
-              SizedBox(
-                height: 100,
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: categories.length,
-                  itemBuilder: (context, index) {
-                    return selectedCategory == index
-                        ? selectedCategoryView(categories[index])
-                        : unselectedCategoryView(categories[index], index, () {
-                            setState(() {
-                              selectedCategory = index;
-                            });
-                          });
-                  },
-                ),
-              ),
+              // ===================== CATEGORY LIST ===================== 
+              // SizedBox(
+              //   height: 100,
+              //   child: ListView.builder(
+              //     scrollDirection: Axis.horizontal,
+              //     itemCount: categories.length,
+              //     itemBuilder: (context, index) {
+              //       return selectedCategory == index
+              //           ? selectedCategoryView(categories[index])
+              //           : unselectedCategoryView(categories[index], index, () {
+              //               setState(() {
+              //                 selectedCategory = index;
+              //               });
+              //             });
+              //     },
+              //   ),
+              // ),
 
               const SizedBox(height: 10),
 
@@ -549,6 +550,25 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.only(bottom: 8),
+        child: SizedBox(
+                  height: 60,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: categories.length,
+                    itemBuilder: (context, index) {
+                      return selectedCategory == index
+                          ? selectedCategoryView(categories[index])
+                          : unselectedCategoryView(categories[index], index, () {
+                              setState(() {
+                                selectedCategory = index;
+                              });
+                            });
+                    },
+                  ),
+                ),
       ),
     );
   }

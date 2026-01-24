@@ -10,11 +10,15 @@ class All extends StatefulWidget {
 class _AllState extends State<All> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-          child: Text(
-            "All ",
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-          ),
-        );
+    return Column(
+      children: [
+        Container(height: 100,),
+        Container(height: 100,),
+        Container(height: 100,),
+      ],
+    );
+          
+       
+
   }
 }
