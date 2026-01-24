@@ -541,8 +541,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Colors.grey.withOpacity(0.1),
+                    color: AllColors.secondaryColor,
                     borderRadius: BorderRadius.circular(15),
+                    border: Border.all(
+                      color:Colors.black.withOpacity(0.1),
+                      width: 1,
+                    )
                   ),
                   child: buildCategoryScreen(),
                 ),
