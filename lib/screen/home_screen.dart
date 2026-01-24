@@ -554,25 +554,6 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.only(bottom: 8),
-        child: SizedBox(
-                  height: 60,
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: categories.length,
-                    itemBuilder: (context, index) {
-                      return selectedCategory == index
-                          ? selectedCategoryView(categories[index])
-                          : unselectedCategoryView(categories[index], index, () {
-                              setState(() {
-                                selectedCategory = index;
-                              });
-                            });
-                    },
-                  ),
-                ),
-      ),
     );
   }
 }
