@@ -4,7 +4,6 @@ import 'package:get/route_manager.dart';
 import 'package:rent_app/const/all_colors.dart';
 import 'package:rent_app/const/all_sizes.dart';
 import 'package:rent_app/screen/bottomnavbar.dart';
-import 'package:rent_app/screen/home_screen.dart';
 import 'package:rent_app/widgets/app_bar_screen.dart';
 import 'package:rent_app/widgets/custom_button.dart';
 import 'package:rent_app/widgets/plan_text.dart';
