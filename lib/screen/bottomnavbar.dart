@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rent_app/screen/home_screen.dart';
+import 'package:rent_app/screen/propertie_screen.dart';
 
 class BottomNavPage extends StatefulWidget {
   const BottomNavPage({super.key});
@@ -13,7 +14,7 @@ class _BottomNavPageState extends State<BottomNavPage> {
 
   final List<Widget> screens = [
     HomeScreen(),
-    Center(child: Text("Property Screen")),
+    PropertieScreen(),
     Center(child: Text("Tenant Screen")),
     Center(child: Text("Maintain Screen")),
     Center(child: Text("Payment Screen")),

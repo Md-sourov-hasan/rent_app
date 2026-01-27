@@ -11,134 +11,542 @@ class PropertieScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            SizedBox(height: 50),
-            Padding(
-              padding: const EdgeInsets.only(left: 8, right: 8),
-              child: Container(
-                height: MediaQuery.sizeOf(context).height * 0.4,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: AllColors.secondaryColor,
-                  borderRadius: BorderRadius.circular(18),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black38.withOpacity(0.1),
-                      blurRadius: 5,
-                      spreadRadius: 1,
-                      offset: const Offset(0, 4),
-                    ),
-                  ],
-                ),
-                child: Column(
-                  children: [
-                    Container(
-                      height: MediaQuery.sizeOf(context).height * 0.2,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(18),
-                          topRight: Radius.circular(18),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              SizedBox(height: 50),
+              Padding(
+                padding: const EdgeInsets.only(left: 8, right: 8),
+                child: Container(
+                  height: MediaQuery.sizeOf(context).height * 0.4,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: AllColors.secondaryColor,
+                    borderRadius: BorderRadius.circular(18),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black38.withOpacity(0.1),
+                        blurRadius: 5,
+                        spreadRadius: 1,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    children: [
+                      Container(
+                        height: MediaQuery.sizeOf(context).height * 0.23,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(18),
+                            topRight: Radius.circular(18),
+                          ),
+                          image: DecorationImage(
+                            image: AssetImage('assets/images/png/a_one.png'),
+                            fit: BoxFit.cover,
+                          ),
                         ),
-                        image: DecorationImage(
-                          image: AssetImage('assets/images/png/a_one.png'),
-                          fit: BoxFit.cover,
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                            top: 16,
+                            left: 10,
+                            right: 10,
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              InkWell(
+                                onTap: () {},
+                                child: Container(
+                                  height: 30,
+                                  width: 90,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xff4c4449).withOpacity(0.4),
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      'Apartment',
+                                      style: TextStyle(
+                                        color: AllColors.secondaryColor,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              InkWell(
+                                onTap: () {},
+                                child: Container(
+                                  height: 30,
+                                  width: 90,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xff00aa8e),
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      'Occupied',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.only(
-                          top: 16,
-                          left: 10,
-                          right: 10,
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
                           children: [
-                            InkWell(
-                              onTap: () {},
-                              child: Container(
-                                height: 30,
-                                width: 90,
-                                decoration: BoxDecoration(
-                                  color: Color(0xff4c4449).withOpacity(0.4),
-                                  borderRadius: BorderRadius.circular(12),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'Oak Street Villa',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
-                                child: Center(
-                                  child: Text(
-                                    'Apartment',
-                                    style: TextStyle(
-                                      color: AllColors.secondaryColor,
-                                      fontWeight: FontWeight.bold,
+                                Container(
+                                  height: 30,
+                                  width: 30,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xfff3f4f6).withOpacity(0.8),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Image.asset(
+                                      'assets/images/png/dot_icon.png',
+                                      height: 5,
+                                      width: 5,
                                     ),
                                   ),
                                 ),
-                              ),
+                              ],
                             ),
-                            InkWell(
-                              onTap: () {},
-                              child: Container(
-                                height: 30,
-                                width: 90,
-                                decoration: BoxDecoration(
-                                  color: Color(0xff00aa8e),
-                                  borderRadius: BorderRadius.circular(12),
+                            SizedBox(height: 5,),
+                            Row(
+                              children: [
+                                Image.asset(
+                                  'assets/images/png/location_icon.png',
+                                  height: 15,
+                                  width: 15,
                                 ),
-                                child: Center(
-                                  child: Text(
-                                    'Occupied',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
+                                SizedBox(width: 5),
+                                Text('Suburban Hills, North Distric'),
+                              ],
+                            ),
+                            SizedBox(height: 20),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  children: [
+                                    Text(
+                                      '\$1,200',
+                                      style: TextStyle(
+                                        color: AllColors.primaryColor,
+                                        fontSize: AllSizes.medium,
+                                      ),
                                     ),
-                                  ),
+                                    Text('/month'),
+                                  ],
                                 ),
-                              ),
+                                Row(
+                                  children: [
+                                    Icon(Icons.bed, size: 16, color: Colors.grey),
+                                    SizedBox(width: 4),
+                                    Text(
+                                      "2",
+                                      style: TextStyle(color: Colors.grey),
+                                    ),
+                                    SizedBox(width: 10),
+                                    Icon(
+                                      Icons.bathtub,
+                                      size: 16,
+                                      color: Colors.grey,
+                                    ),
+                                    SizedBox(width: 4),
+                                    Text(
+                                      "2",
+                                      style: TextStyle(color: Colors.grey),
+                                    ),
+                                  ],
+                                ),
+                              ],
                             ),
                           ],
                         ),
                       ),
-                    ),
-                    SizedBox(height: 10,),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text('Oak Street Villa',
-                              style: TextStyle(
-                                fontSize:20,
-                                fontWeight: FontWeight.bold,
-                              ),
-                              ),
-                              Container(
-                                height: 40,
-                                width: 40,
-                                decoration: BoxDecoration(
-                                  color: Color(0xfff3f4f6).withOpacity(0.8),
-                                  borderRadius: BorderRadius.circular(20),
-                                  
-                                ),
-                                child:Padding(
-                                  padding: const EdgeInsets.all(10.0),
-                                  child: Image.asset('assets/images/png/dot_icon.png',height: 5,width: 5,),
-                                ),
-                              ),
-                              Text('')
-                            ],
-                          ),
-                        ],
-                      ),
-                    )
-                  ],
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+              SizedBox(height: 20,),
+              Padding(
+                padding: const EdgeInsets.only(left: 8, right: 8),
+                child: Container(
+                  height: MediaQuery.sizeOf(context).height * 0.4,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: AllColors.secondaryColor,
+                    borderRadius: BorderRadius.circular(18),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black38.withOpacity(0.1),
+                        blurRadius: 5,
+                        spreadRadius: 1,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    children: [
+                      Container(
+                        height: MediaQuery.sizeOf(context).height * 0.23,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(18),
+                            topRight: Radius.circular(18),
+                          ),
+                          image: DecorationImage(
+                            image: AssetImage('assets/images/png/a_two.png'),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                            top: 16,
+                            left: 10,
+                            right: 10,
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              InkWell(
+                                onTap: () {},
+                                child: Container(
+                                  height: 30,
+                                  width: 90,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xff4c4449).withOpacity(0.4),
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      'Apartment',
+                                      style: TextStyle(
+                                        color: AllColors.secondaryColor,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              InkWell(
+                                onTap: () {},
+                                child: Container(
+                                  height: 30,
+                                  width: 90,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xff00aa8e),
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      'Occupied',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'City View Studio 12B',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Container(
+                                  height: 30,
+                                  width: 30,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xfff3f4f6).withOpacity(0.8),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Image.asset(
+                                      'assets/images/png/dot_icon.png',
+                                      height: 5,
+                                      width: 5,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 5,),
+                            Row(
+                              children: [
+                                Image.asset(
+                                  'assets/images/png/location_icon.png',
+                                  height: 15,
+                                  width: 15,
+                                ),
+                                SizedBox(width: 5),
+                                Text('City Center, High-rise Building'),
+                              ],
+                            ),
+                            SizedBox(height: 20),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  children: [
+                                    Text(
+                                      '\$1,200',
+                                      style: TextStyle(
+                                        color: AllColors.primaryColor,
+                                        fontSize: AllSizes.medium,
+                                      ),
+                                    ),
+                                    Text('/month'),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    Icon(Icons.bed, size: 16, color: Colors.grey),
+                                    SizedBox(width: 4),
+                                    Text(
+                                      "2",
+                                      style: TextStyle(color: Colors.grey),
+                                    ),
+                                    SizedBox(width: 10),
+                                    Icon(
+                                      Icons.bathtub,
+                                      size: 16,
+                                      color: Colors.grey,
+                                    ),
+                                    SizedBox(width: 4),
+                                    Text(
+                                      "2",
+                                      style: TextStyle(color: Colors.grey),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 20,),
+              Padding(
+                padding: const EdgeInsets.only(left: 8, right: 8),
+                child: Container(
+                  height: MediaQuery.sizeOf(context).height * 0.4,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: AllColors.secondaryColor,
+                    borderRadius: BorderRadius.circular(18),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black38.withOpacity(0.1),
+                        blurRadius: 5,
+                        spreadRadius: 1,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    children: [
+                      Container(
+                        height: MediaQuery.sizeOf(context).height * 0.23,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(18),
+                            topRight: Radius.circular(18),
+                          ),
+                          image: DecorationImage(
+                            image: AssetImage('assets/images/png/a_three.png'),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                            top: 16,
+                            left: 10,
+                            right: 10,
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              InkWell(
+                                onTap: () {},
+                                child: Container(
+                                  height: 30,
+                                  width: 90,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xff4c4449).withOpacity(0.4),
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      'Apartment',
+                                      style: TextStyle(
+                                        color: AllColors.secondaryColor,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              InkWell(
+                                onTap: () {},
+                                child: Container(
+                                  height: 30,
+                                  width: 90,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xff00aa8e),
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      'Occupied',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'Oak Street Villa',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Container(
+                                  height: 30,
+                                  width: 30,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xfff3f4f6).withOpacity(0.8),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Image.asset(
+                                      'assets/images/png/dot_icon.png',
+                                      height: 5,
+                                      width: 5,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 5,),
+                            Row(
+                              children: [
+                                Image.asset(
+                                  'assets/images/png/location_icon.png',
+                                  height: 15,
+                                  width: 15,
+                                ),
+                                SizedBox(width: 5),
+                                Text('Suburban Hills, North Distric'),
+                              ],
+                            ),
+                            SizedBox(height: 20),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  children: [
+                                    Text(
+                                      '\$1,200',
+                                      style: TextStyle(
+                                        color: AllColors.primaryColor,
+                                        fontSize: AllSizes.medium,
+                                      ),
+                                    ),
+                                    Text('/month'),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    Icon(Icons.bed, size: 16, color: Colors.grey),
+                                    SizedBox(width: 4),
+                                    Text(
+                                      "2",
+                                      style: TextStyle(color: Colors.grey),
+                                    ),
+                                    SizedBox(width: 10),
+                                    Icon(
+                                      Icons.bathtub,
+                                      size: 16,
+                                      color: Colors.grey,
+                                    ),
+                                    SizedBox(width: 4),
+                                    Text(
+                                      "2",
+                                      style: TextStyle(color: Colors.grey),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 80,),
+            ],
+          ),
         ),
       ),
     );
