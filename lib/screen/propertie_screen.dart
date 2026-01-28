@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/extension_navigation.dart';
-import 'package:get/instance_manager.dart';
 import 'package:rent_app/const/all_colors.dart';
 import 'package:rent_app/const/all_sizes.dart';
-import 'package:rent_app/screen/home_screen.dart';
 
 class PropertieScreen extends StatelessWidget {
   const PropertieScreen({super.key});
