@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:rent_app/screen/add_property_screen.dart';
+import 'package:rent_app/auth/login.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized(); // ensure everything initialized
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home:AddPropertyScreen(), 
+      home: const Login(), 
     );
   }
 }
